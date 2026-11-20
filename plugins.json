@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-20",
+  "note": "本机已装插件清单；不含源码与配置密钥。安装命令：dsh plugin add <name> --profile desktop",
+  "environment": {
+    "os": "macOS (Apple Silicon)",
+    "dshAppVersion": "0.2.2-rc.5",
+    "profile": "desktop",
+    "dshCli": "/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
+  },
+  "paths": {
+    "profileDir": "~/.dsh/profiles/desktop",
+    "pluginsDir": "~/.dsh/profiles/desktop/node_modules",
+    "declarationFile": "~/.dsh/profiles/desktop/package.json",
+    "loadListKey": "dsh.profile.bundles",
+    "configOverlay": "~/.dsh/profiles/desktop/cordis.patch.yml",
+    "installLogs": "~/.dsh/profiles/desktop/.plugin-manager/logs/"
+  },
+  "plugins": [
+    {
+      "name": "@nanmicoder/dsh-agent-teams",
+      "version": "0.1.30",
+      "enabled": true,
+      "summary": "多 agent 团队协作：队长/成员、任务依赖、消息、Web 树形监控",
+      "repo": "https://github.com/NanmiCoder/dsh-agent-teams",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/@nanmicoder/dsh-agent-teams",
+      "configNote": "无需额外配置"
+    },
+    {
+      "name": "@perrylink/dsh-github",
+      "version": "0.7.28",
+      "enabled": true,
+      "summary": "GitHub：PR/issue 读写、CI 状态、PR 评审 bot、审批门控",
+      "repo": "https://github.com/PerryLink/dsh-github",
+      "license": "Apache-2.0",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/@perrylink/dsh-github",
+      "configNote": "需 GitHub 登录（gh auth login 或 token）"
+    },
+    {
+      "name": "@xmanrui/dsh-im",
+      "version": "5.9.1",
+      "enabled": true,
+      "summary": "即时通讯接入：微信、飞书、企微、钉钉、QQ、Telegram、WhatsApp、Slack、Discord、Matrix",
+      "repo": "https://github.com/xmanrui/dsh-im",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/@xmanrui/dsh-im",
+      "configNote": "各通道 token/webhook 在 ~/.dsh/integrations/ 下"
+    },
+    {
+      "name": "dsh-browser-cdp",
+      "version": "1.7.12",
+      "enabled": true,
+      "summary": "可见浏览器：用 CDP 驱动 Chromium，也可挂接已开的 Chrome/Edge",
+      "repo": "https://github.com/drscrewdriver/dsh-browser-cdp",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dsh-browser-cdp",
+      "configNote": "首次启动拉起自带 Chromium；挂接现有 Chrome 需 CDP 端口"
+    },
+    {
+      "name": "dsh-email",
+      "version": "0.29.0",
+      "enabled": true,
+      "summary": "邮件工作台：多账号收发、草稿、定时发送需确认、OAuth",
+      "repo": "https://github.com/STARDUSTLC666/dsh-email",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dsh-email",
+      "configNote": "账号口令在 cordis.patch.yml 的 tool-email 段（明文，勿外传）"
+    },
+    {
+      "name": "dsh-mac-computer-use",
+      "version": "1.5.1",
+      "enabled": true,
+      "summary": "macOS 桌面操作：窗口列表、截图、OCR 找文字、后台点击/输入",
+      "repo": "https://github.com/OrderG-X/dsh-mac-computer-use",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dsh-mac-computer-use",
+      "configNote": "需系统授权：屏幕录制/辅助功能"
+    },
+    {
+      "name": "dsh-prime-memory",
+      "version": "0.26.41",
+      "enabled": true,
+      "summary": "分层记忆：L0 采集 → L1 原子记忆 → L2 场景 → L3 画像，按步召回注入",
+      "repo": "https://github.com/drscrewdriver/dsh-prime-memory",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dsh-prime-memory",
+      "configNote": "数据在 ~/.dsh/memory/；可指定蒸馏模型，默认跟随主模型"
+    },
+    {
+      "name": "dsh-reference-session-collector",
+      "version": "0.2.9",
+      "enabled": true,
+      "summary": "只读扫描会话日志，投影进 SQLite 做检索面（不写会话文件）",
+      "repo": "https://github.com/drscrewdriver/dsh-reference-session-collector",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dsh-reference-session-collector",
+      "configNote": "无需额外配置"
+    },
+    {
+      "name": "dshmarket",
+      "version": "1.73.5",
+      "enabled": true,
+      "summary": "可视化插件市场，界面里搜、点一下装",
+      "repo": "https://github.com/dsh-market/dsh-market",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dshmarket",
+      "configNote": "无需额外配置"
+    },
+    {
+      "name": "dsh-soul-md",
+      "version": "0.10.3",
+      "enabled": false,
+      "summary": "soul.md 风格人设 + 记忆",
+      "repo": "https://github.com/Scorp1o117/dsh-soul-md",
+      "license": "MIT",
+      "installPath": "~/.dsh/profiles/desktop/node_modules/dsh-soul-md",
+      "configNote": "已停用：cordis.patch.yml 中 soul-md 段 disabled: true；删掉该行即恢复。人设现由 dsh-prime-memory 承接"
+    },
+    {
+      "name": "@deepseek-ai/dsh-base",
+      "version": "bundled",
+      "enabled": true,
+      "summary": "DSH 基础能力（工具、技能加载、会话）",
+      "repo": null,
+      "license": null,
+      "installPath": "App 自带（app.asar 内）",
+      "configNote": "随 App 安装，不需要单独装"
+    },
+    {
+      "name": "@deepseek-ai/dsh-web-app",
+      "version": "bundled",
+      "enabled": true,
+      "summary": "DSH Web 界面",
+      "repo": null,
+      "license": null,
+      "installPath": "App 自带（app.asar 内）",
+      "configNote": "随 App 安装，不需要单独装"
+    }
+  ]
+}

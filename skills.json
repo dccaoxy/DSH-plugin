@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-20",
+  "note": "本机已装技能清单；不含源码。装法：把目录复制到 ~/.dsh/skills/<name>/，保证里面有 SKILL.md",
+  "paths": {
+    "userSkillsDir": "~/.dsh/skills",
+    "entryFile": "~/.dsh/skills/<name>/SKILL.md",
+    "projectOverride": [
+      "<project>/.dsh/skills/",
+      "<project>/.agents/skills/"
+    ]
+  },
+  "precedence": "项目级 .dsh/skills/ 或 .agents/skills/ 覆盖用户级 ~/.dsh/skills/",
+  "skills": [
+    {
+      "name": "archify",
+      "skillVersion": "3.2.0",
+      "path": "~/.dsh/skills/archify",
+      "summary": "架构/流程/时序/数据流/状态/ERD/类图/时间线等，产出可交互单页 HTML，可导出 PNG/SVG/WebM",
+      "source": "https://github.com/tt-a1i/archify",
+      "sourceVerified": true,
+      "size": "18M",
+      "files": 206,
+      "deps": []
+    },
+    {
+      "name": "unslop",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/unslop",
+      "summary": "把 AI 味的界面改成有设计感的界面：间距、配色、图标、文案、排版、动效",
+      "source": "Damir Sokolovsky (@heydamir), CC-BY-4.0",
+      "sourceVerified": true,
+      "size": "1.4M",
+      "files": 16,
+      "deps": []
+    },
+    {
+      "name": "defuddle",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/defuddle",
+      "summary": "网页转干净 Markdown",
+      "source": "未记录（依赖 kepano/defuddle CLI）",
+      "sourceVerified": false,
+      "size": "4K",
+      "files": 1,
+      "deps": [
+        "defuddle CLI 0.19.7"
+      ]
+    },
+    {
+      "name": "knap",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/knap",
+      "summary": "用模板 + JSON/CSV 批量生成 Markdown",
+      "source": "未记录（依赖 obsidianmd/knap CLI）",
+      "sourceVerified": false,
+      "size": "8K",
+      "files": 1,
+      "deps": [
+        "knap CLI 0.6.0"
+      ]
+    },
+    {
+      "name": "obsidian-markdown",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/obsidian-markdown",
+      "summary": "Obsidian 风格 Markdown：wikilink、embed、callout、属性",
+      "source": "未记录",
+      "sourceVerified": false,
+      "size": "20K",
+      "files": 4,
+      "deps": []
+    },
+    {
+      "name": "obsidian-bases",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/obsidian-bases",
+      "summary": ".base 文件：视图、筛选、公式、汇总",
+      "source": "未记录",
+      "sourceVerified": false,
+      "size": "28K",
+      "files": 2,
+      "deps": []
+    },
+    {
+      "name": "obsidian-cli",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/obsidian-cli",
+      "summary": "用 Obsidian CLI 读写库、管属性/任务、调插件主题",
+      "source": "未记录",
+      "sourceVerified": false,
+      "size": "8K",
+      "files": 1,
+      "deps": [
+        "obsidian CLI（Obsidian.app 自带）"
+      ]
+    },
+    {
+      "name": "obsidian-headless",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/obsidian-headless",
+      "summary": "无桌面端时用 ob 命令行做同步/发布",
+      "source": "未记录",
+      "sourceVerified": false,
+      "size": "8K",
+      "files": 1,
+      "deps": [
+        "obsidian headless (ob)"
+      ]
+    },
+    {
+      "name": "json-canvas",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/json-canvas",
+      "summary": "生成/编辑 .canvas 文件（节点、连线、分组）",
+      "source": "未记录（SKILL.md 引用格式规范 obsidianmd/jsoncanvas，非技能本体来源）",
+      "sourceVerified": false,
+      "size": "20K",
+      "files": 2,
+      "deps": []
+    },
+    {
+      "name": "shop-route",
+      "skillVersion": null,
+      "path": "~/.dsh/skills/shop-route",
+      "summary": "多店最短驾车路线 + 高德 App 可扫的完整路线二维码",
+      "source": "本机自建（含 scripts/）",
+      "sourceVerified": true,
+      "size": "12K",
+      "files": 3,
+      "deps": []
+    }
+  ],
+  "externalClis": [
+    {
+      "command": "defuddle",
+      "version": "0.19.7",
+      "install": "npm install -g defuddle",
+      "location": "~/.local/lib/node_modules/defuddle",
+      "usedBy": [
+        "defuddle"
+      ]
+    },
+    {
+      "command": "knap",
+      "version": "0.6.0",
+      "install": "npm install -g knap",
+      "location": "~/.local/lib/node_modules/knap",
+      "usedBy": [
+        "knap"
+      ]
+    },
+    {
+      "command": "lark-cli",
+      "version": "1.0.99",
+      "install": "npm install -g @larksuite/cli",
+      "location": "~/.local/lib/node_modules/@larksuite/cli",
+      "usedBy": [
+        "lark-* 系列（DSH 自带技能）"
+      ]
+    },
+    {
+      "command": "obsidian",
+      "version": "app-bundled",
+      "install": "安装 Obsidian.app 后由插件提供",
+      "location": "/Applications/Obsidian.app/Contents/MacOS/obsidian-cli",
+      "usedBy": [
+        "obsidian-cli"
+      ]
+    },
+    {
+      "command": "gh",
+      "version": "2.103.3",
+      "install": "arm64 压缩包解到 ~/.local/opt/gh-2.103.3/，再软链到 ~/.local/bin",
+      "location": "~/.local/opt/gh-2.103.3",
+      "usedBy": [
+        "github 操作",
+        "仓库管理"
+      ]
+    }
+  ]
+}
